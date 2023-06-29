@@ -28,7 +28,7 @@ Scalar RED = Scalar(0, 0, 255);
 
 void get_object_names(vector<string>& class_list)
 {
-	ifstream ifs("coco.names");
+	ifstream ifs("../../../../coco.names");
 	string line;
 	while (getline(ifs, line))
 	{
@@ -39,7 +39,7 @@ void get_object_names(vector<string>& class_list)
 Net get_brandbrigade_net()
 {
 	string model = "yolov3.weights";
-	string config = "yolov3.cfg";
+	string config = "../../../../yolov3.cfg";
 	return readNet(model, config, "Darknet");
 
 }
