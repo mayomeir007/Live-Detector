@@ -14,7 +14,11 @@ In the C++ DLL, the following technologies are intgerated:
 
 The dll also uses multithreading to enable switching between webcam, video file, and stopping options during runtime.
 
+Webcam
+![image](https://github.com/mayomeir007/BrandBrigade3/assets/59373530/b0009fda-e364-411a-94d0-a7f37c565149)
 
+File
+![image](https://github.com/mayomeir007/BrandBrigade3/assets/59373530/0c979a54-3779-48ce-8c88-9022704eb58f)
 
 
 
