@@ -118,7 +118,7 @@
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <AdditionalOptions>/Zc:twoPhase- %(AdditionalOptions)</AdditionalOptions>
-      <AdditionalIncludeDirectories>C:\Users\meirb\Downloads\OpenCV And Darknet\OpenCV\opencv\include;C:\Users\meirb\Downloads\OpenCV And Darknet\OpenCV\Install64\opencv\include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\meirb\source\repos\Live-Detector\Libraries\OpenCV\include</AdditionalIncludeDirectories>
       <ShowIncludes>false</ShowIncludes>
     </ClCompile>
     <Link>
