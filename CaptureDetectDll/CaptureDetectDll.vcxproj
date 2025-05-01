@@ -125,7 +125,7 @@
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
-      <AdditionalLibraryDirectories>C:\Users\meirb\Downloads\OpenCV And Darknet\OpenCV\Install64\opencv\x64\vc16\lib;</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>C:\Users\meirb\source\repos\Live-Detector\Libraries\OpenCV\lib</AdditionalLibraryDirectories>
       <AdditionalDependencies>opencv_img_hash452d.lib;opencv_world452d.lib;$(CoreLibraryDependencies);%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
