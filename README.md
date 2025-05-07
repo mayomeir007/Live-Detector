@@ -1,3 +1,8 @@
+### Prerequisites
+1. [OpenCV 3.0](https://opencv.org/)
+2. Go to https://github.com/patrick013/Object-Detection---Yolov3/tree/master/model and download the weights file 'yolov3.weights'. Place this file in the output path to the binaries you specified.
+
+### Description
 This is a windows application that allows capturing a video from either a webcam or a file, detect
 objects in the video’s frame, and show the frame and the detected objects using rectangles and
 text-labels.
