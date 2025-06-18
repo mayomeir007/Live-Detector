@@ -2,8 +2,9 @@
 
 #include "BrandBrigade.h"
 
-extern std::thread working_thread;
-extern std::atomic_bool stop_thread_1;
+extern std::atomic<bool> keepRunning;
+extern std::wstring filePath;
+extern bool newFile;
 
 using namespace cv;
 
@@ -23,10 +24,10 @@ Mat GetCVMatFromMFFrame(const CComPtr<IMFFrame>& cpFrame)
 
 void StopPreview()
 {
-	if (working_thread.joinable())
-	{
-		stop_thread_1 = true;
-		working_thread.join();
-	}
+	keepRunning = false;
+
+	filePath.clear();
+	newFile = true;
+	
 }
 

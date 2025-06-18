@@ -18,7 +18,10 @@
 #ifndef LIVE_INPUT_H
 #define LIVE_INPUT_H
 #include <thread>
-
+#include <atomic>
+#include <mutex>
+#include <condition_variable>
+#include <chrono>
 
 #include "stdafx.h"
 #include "MIDL64/MFormats.h"
@@ -36,14 +39,21 @@ using namespace System::Drawing;
 #ifdef __cplusplus
 extern "C" {
 #endif
-	//converts input windows handle to unmanaged CLR form and starts a new thread with function 'FileInputPanel'
-	void __declspec(dllexport) FileInput(HWND panelHandle, wchar_t * filepath);
 
-	//converts input windows handle to unmanaged CLR form and starts a new thread with function 'LiveInputPanel'
-	void __declspec(dllexport) LiveInput(HWND panelHandle);
+	//converts input windows handle to unmanaged CLR form, and starts a new thread with function 'FileInputPanel' and a new thread with function 'LiveInputPanel'
+	void __declspec(dllexport) StartThreads(HWND paneHandle, bool useWebCam);
 
-	//stops the working thread, if it exists
+	//stops live feed if there is one, and replaces existing input file if there is one with new input file
+	void __declspec(dllexport) FileInput(wchar_t * filepath);
+
+	//stops existing input file if there is one ,and starts a live feed 
+	void __declspec(dllexport) LiveInput();
+
+	//stops the the live feed id there is one, and current input file if there is one
 	void __declspec(dllexport) StopPreview();
+
+	//stops the thread with function 'FileInputPanel' and the thread with function 'LiveInputPanel'
+	void __declspec(dllexport) StopThreads(bool useWebCam);
 #ifdef __cplusplus
 }
 #endif
@@ -51,8 +61,8 @@ extern "C" {
 //converts the input MFrame to an OpenCV Mat
 cv::Mat GetCVMatFromMFFrame(const CComPtr<IMFFrame>& cpFrame);
 
-//streams frames of input video/image on the given panel, with rectangles and labels over detected objects
-void FileInputPanel(gcroot<Panel^> preview, wchar_t* filepath);
+//streams video/image frames on the given panel, with rectangles and labels over detected objects
+void FileInputPanel(gcroot<Panel^> preview);
 
 //streams computer webcam frames on the given panel, with rectangles and labels over detected objects
 void LiveStreamToPreview(gcroot<Panel^> preview);
