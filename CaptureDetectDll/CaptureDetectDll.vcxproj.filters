@@ -46,5 +46,8 @@
     <ClCompile Include="StopPreview.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="StartInput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
