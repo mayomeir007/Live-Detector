@@ -46,7 +46,17 @@ namespace BrandBrigade3
 
         private void BrandBrigadeTask_Load(object sender, EventArgs e)
         {
+            DialogResult dialogResult = MessageBox.Show("Do you wish to use your webcam?", "", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
                 useWebcam = true;
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                FromWebCamBtn.Enabled = false;
+                useWebcam = false;
+            }
+
             StartThreads(PreviewPanel.Handle, useWebcam);
         }
 
@@ -57,7 +67,6 @@ namespace BrandBrigade3
             {
                 FileInput(openFileDialog.FileName);
             }
-
         }
 
         private void FromWebCamBtn_Click(Object sender, EventArgs e)
