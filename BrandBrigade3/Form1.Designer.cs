@@ -82,6 +82,7 @@
             this.Controls.Add(this.PreviewPanel);
             this.Name = "BrandBrigadeTask";
             this.Text = "Brand Brigade Task";
+            this.Load += new System.EventHandler(this.BrandBrigadeTask_Load);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.BrandBrigadeTask_FormClosed);
             this.ResumeLayout(false);
 
