@@ -1,3 +1,5 @@
+The project demonstrates integration of a C# graphical user interface with a native C++ processing DLL, combining video capture, OpenCV DNN inference, frame annotation, inter-language data marshalling, and multithreaded runtime control.
+
 ### Prerequisites
 1. [OpenCV 3.0](https://opencv.org/)
 2. Go to https://github.com/patrick013/Object-Detection---Yolov3/tree/master/model and download the weights file 'yolov3.weights'. Place this file in the output path to the binaries you specified.
