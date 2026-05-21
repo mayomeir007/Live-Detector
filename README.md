@@ -11,7 +11,7 @@ text-labels.
 
 The C# part implements the GUI only, and delegates all the calls to a C++ dll.
 
-In the C++ DLL, the following technologies are intgerated:
+In the C++ DLL, the following technologies are integrated:
 
 1. MediaLook MFormats SDK - for capturing the frames from the webcam and video files 
 2. OpenCV's DNN module - for detecting objects in the frames
