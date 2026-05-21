@@ -1,4 +1,4 @@
-The project demonstrates integration of a C# graphical user interface with a native C++ processing DLL, combining video capture, OpenCV DNN inference, frame annotation, inter-language data marshalling, and multithreaded runtime control.
+This project demonstrates integration of a C# graphical user interface with a native C++ processing DLL, combining video capture, OpenCV DNN inference, frame annotation, inter-language data marshalling, and multithreaded runtime control.
 
 ### Prerequisites
 1. [OpenCV 3.0](https://opencv.org/)
